@@ -18,7 +18,6 @@ function loaderInstall() {
 		}, 1500);
 	}	
 }
-var touchmove=false;
 
 $(document).on('ready', function(){
 	$("dd a.hotspot").click(function(){
@@ -28,28 +27,19 @@ $(document).on('ready', function(){
 
 	window.addEventListener("popstate", loaderInstall);
 
-	$("#register-swipe").bind("touchmove", function(){
-		touchmove=true;
-	}).bind('touchend', function(event){
+	$("#register-swipe").bind('touchend', function(event){
 		var indicator = $("ul#indicator");
 		var boxSize = indicator.find("li").size();
-
-		if(!touchmove) return false;
 
 		if(boxSize == 8){
 			navigateTo("step3");
 		}else{
 			indicator.append("<li></li>");
 		}
-		touchmove=false;
 	});
 
-	$("#swipe a").bind("touchmove", function(event){
-		touchmove=true;
-	}).bind("touchend", function(event){
-		if(!touchmove) return false;
+	$("#swipe a").bind("touchend", function(event){
 		navigateTo(this.href.split("#")[1]);
-		touchmove=false;
 	});
 
 	loaderInstall();
