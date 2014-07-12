@@ -91,7 +91,7 @@ a.btn
   /*border: 1px solid yellow;*/
 }
 
-#wrapper input[type=text]
+#wrapper input
 {
   position: absolute;
   border: 0 none;

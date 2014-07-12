@@ -14,7 +14,7 @@ function loaderInstall() {
 		setTimeout(function(){
 			var nextId = $('#' + stepId).next().attr("id");
 			navigateTo(nextId);
-			
+			navigator.notification.vibrate(500);
 		}, 1500);
 	}	
 }
@@ -35,6 +35,7 @@ $(document).on('ready', function(){
 			navigateTo("step3");
 		}else{
 			indicator.append("<li></li>");
+			navigator.notification.vibrate(500);
 		}
 	});
 
