@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>ScareScrow</title>
+		<meta charset="utf-8">	
+		<meta name="application-name" content="PayPal" />
+        <meta name="msapplication-task" content="name=My Account;action-uri=https://www.paypal.com/sg/cgi-bin/webscr?cmd=_account;icon-uri=https://www.paypalobjects.com/webstatic/icon/favicon.ico" />
+        <meta name="msapplication-task" content="name=Send Money;action-uri=https://www.paypal.com/sg/cgi-bin/webscr?cmd=_send-money-transfer&send_method=domestic;icon-uri=https://www.paypalobjects.com/webstatic/icon/favicon.ico" />
+        <meta name="msapplication-task" content="name=Request Money;action-uri=https://www.paypal.com/sg/webapps/mpp/requesting-payments;icon-uri=https://www.paypalobjects.com/webstatic/icon/favicon.ico" />
+        <meta name="keywords" content="send money, pay online, merchant account" />
+        <meta name="description" content="PayPal Singapore is the faster, safer way to send money, make an online payment, receive money or set up a merchant account." />
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://www.paypalobjects.com/webstatic/icon/pp144.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://www.paypalobjects.com/webstatic/icon/pp114.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://www.paypalobjects.com/webstatic/icon/pp72.png" />
+        <link rel="apple-touch-icon-precomposed" href="https://www.paypalobjects.com/webstatic/icon/pp64.png" />
+        <link rel="shortcut icon" sizes="196x196" href="https://www.paypalobjects.com/webstatic/icon/pp196.png" />
+        <link rel="shortcut icon" type="image/x-icon" href="https://www.paypalobjects.com/webstatic/icon/favicon.ico" />
+        <link rel="icon" type="image/x-icon" href="https://www.paypalobjects.com/webstatic/icon/pp32.png" />
+  		<meta name="viewport" content="initial-scale=1, minimum-scale=1, maximum-scale=1">
+		<link rel="stylesheet" type="text/css" href="css/app.css">
+	</head>
+	<body>
+		<section id="wrapper">
+			<dl id="panelContainer">
+				<dd id="main">
+					<a id="PPlogo" href="http://www.paypal.com">PayPal</a>
+					<h1>Fingerprint Setting</h1>
+					<a href="#step1A" class="btn hotspot">First Time Use</a>
+					<a href="#step1B" class="btn hotspot">Repeat Use</a>
+				</dd>
+				<dd id="step1A">
+					<a href="#step2" class="hotspot" style="width: 64px;height: 62px;position: absolute;bottom: 68px;left:27px;border-radius: 35px;"></a>
+				</dd>
+				<dd id="step1B">
+					<a href="#step4B" class="hotspot" style="width: 64px;height: 62px;position: absolute;bottom: 68px;left:27px;border-radius: 35px;"></a>
+				</dd>				
+				<dd id="step2">
+					<ul id="indicator"></ul>				
+					<a id="register-swipe" href="#" style="width: 64px;height: 86px;position: absolute;bottom: 0;left: 146px;"></a>
+				</dd>		
+				<dd id="step3">
+					<a href="#step4A" class="hotspot" style="width: 169px;height: 49px;position: absolute;bottom: 189px;right: 9px;"></a>					
+				</dd>		
+				<dd id="step4A">
+					<a href="#splash" class="hotspot" style="width: 358px;height: 62px;position: absolute;top: 202px;left: 0;"></a>
+				</dd>
+				<dd id="step4B">
+					<a href="#splash" class="hotspot" style="width: 358px;height: 62px;position: absolute;top: 411px;left: 0;"></a>
+				</dd>
+				<dd id="splash">
+					<a href="#install-screen" class="hotspot" style="width: 333px;height: 55px;position: absolute;bottom: 76px;left: 13px;"></a>								
+				</dd>		
+				<dd id="install-screen">
+				</dd>
+				<dd id="login">
+					<input type="text" name="email" placeholder="Email address" style="top: 166px;left: 21px;width: 317px;height: 20px;"/>
+					<input type="text" name="password" placeholder="Password" style="top: 231px;left: 21px;width: 317px;height: 20px;"/>
+					<a href="#loading-screen" class="hotspot" style="width: 333px;height: 55px;position: absolute;bottom: 304px;left: 13px;"></a>									
+				</dd>		
+				<dd id="loading-screen">
+					<img id="logo" src="img/loader/introLoaderLogo.png" />
+					<img id="loader" src="img/loader/introLoaderCircle.png" />
+				</dd>
+
+				<dd id="swipe">
+					<a href="#confirm" class="hotspot" style="width: 64px;height: 98px;position: absolute;bottom: 0;left: 146px;"></a>									
+				</dd>		
+				<dd id="confirm">
+					<a href="https://www.paypal-pages.com/samsunggalaxys5/sg/index.html" style="width: 333px;height: 56px;position: absolute;bottom: 228px;left: 13px;"></a>										
+					<a href="index.html" style="width: 110px;height: 37px;position: absolute;bottom: 173px;left: 122px;"></a>											
+				</dd>
+			</dl>
+		</section>
+		<script type="text/javascript" src="cordova.js"></script>
+		<script type="text/javascript" src="js/jquery.js"></script>
+		<script type="text/javascript" src="js/app.js"></script>		
+	</body>
+</html>

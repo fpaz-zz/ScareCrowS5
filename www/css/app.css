@@ -1,0 +1,202 @@
+body
+{
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  font-size: 14px;
+  line-height: 1.5em;
+  color: #767676;  
+	margin:0;
+}
+
+#PPlogo {
+  display: inline-block;
+  width: 126px;
+  height: 33px;
+  overflow: hidden;
+  text-indent: -999em;
+  background: transparent url(../img/ppcom.svg) center center no-repeat;
+  background-size: 124px 33px;
+  vertical-align: middle;
+  left: 50%;
+  margin-left: -62px;
+  position: absolute;
+}
+
+h1
+{
+  font-size: 2rem;
+  font-weight: 300;
+  line-height: 1.25em;
+  letter-spacing: 0.01em;
+  color: #444;
+  margin: 0;
+  padding-top: 0;
+  padding-bottom: 0;  
+  text-align: center;
+  margin: 70px 0 40px;
+}
+
+ul { list-style-type: none; padding:0;}
+a { text-decoration: none; }
+
+a.btn
+{
+  padding: 9px 15px 10px;
+  margin-bottom: 30px;
+  background: #009cde;
+  color:#FFF;
+  font-size: 1.07142857142857rem;
+  font-weight: bold;
+  line-height: 1.4545em;
+  -webkit-font-smoothing: antialiased;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  border-radius: 5px; 
+  display:block; 
+}
+
+#wrapper
+{
+  	margin:0;
+    width:360px;
+    height: 640px;
+    overflow: hidden;
+}
+
+#wrapper dl
+{
+  	-webkit-transition:-webkit-transform ease;
+  	margin:0;
+}
+
+#wrapper dl dd
+{
+	background-size: 360px 640px;
+	width:360px;
+	height: 640px;
+	margin:0;
+  position: relative;
+}
+
+#main
+{
+  width:280px !important;
+  height:560px !important;
+  padding:40px;
+}
+
+#wrapper dl dd a.hotspot
+{
+  /*border: 1px solid yellow;*/
+}
+
+#wrapper input[type=text]
+{
+  position: absolute;
+  border: 0 none;
+  font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size:1.071rem;
+  line-height: 1.25em;
+  -webkit-font-smoothing: antialiased;
+  text-shadow:none;
+  -webkit-appearance:none;
+  outline:none;
+}
+
+ul#indicator
+{
+  position: absolute;
+  top: 351px;
+  padding: 0 52px;
+}
+
+ul#indicator li {
+  width: 22px;
+  height: 21px;
+  display: inline-block;
+  background: green;
+  margin-left: 9px;
+}
+
+#logo {
+  top: 30%;
+  left: 50%;
+  margin-top: -19px;
+  margin-left: -19px;
+  position: absolute;
+  width: 37px;
+  height: 37px;
+}
+
+#loader {
+  top: 30%;
+  left: 50%;
+  margin-top: -47px;
+  margin-left: -47px;
+  position: absolute;
+  width: 94px;
+  height: 94px;
+  z-index: 20;  
+  -webkit-animation: spin 1s linear infinite;
+  -moz-animation: spin 1s linear infinite;
+  -ms-animation: spin 1s linear infinite;
+  -o-animation: spin 1s linear infinite;
+  animation: spin 1s linear infinite;  
+}
+
+@-webkit-keyframes spin
+{
+  from { -webkit-transform: rotate(0deg); opacity: 0.4; }
+  50%  { -webkit-transform: rotate(180deg); opacity: 1; }
+  to   { -webkit-transform: rotate(360deg); opacity: 0.4; }
+}
+
+@-moz-keyframes spin
+{
+  from { -moz-transform: rotate(0deg); opacity: 0.4; }
+  50%  { -moz-transform: rotate(180deg); opacity: 1; }
+  to   { -moz-transform: rotate(360deg); opacity: 0.4; }
+}
+
+@-ms-keyframes spin
+{
+  from { -ms-transform: rotate(0deg); opacity: 0.4; }
+  50%  { -ms-transform: rotate(180deg); opacity: 1; }
+  to   { -ms-transform: rotate(360deg); opacity: 0.4; }
+}
+
+@-o-keyframes spin
+{
+  from { -o-transform: rotate(0deg); opacity: 0.4; }
+  50%  { -o-transform: rotate(180deg); opacity: 1; }
+  to   { -o-transform: rotate(360deg); opacity: 0.4; }
+}
+
+@keyframes spin
+{
+  from { transform: rotate(0deg); opacity: 0.2; }
+  50%  { transform: rotate(180deg); opacity: 1; }
+  to   { transform: rotate(360deg); opacity: 0.2; }
+}
+
+
+#step1A { background-image:url("../img/01A-Settings.png"); }	
+#step1B { background-image:url("../img/01A-Settings.png"); } 
+#step2 { background-image:url("../img/01B-Settings.png"); }	
+#step3 { background-image:url("../img/01C-Settings.png"); }	
+#step4A { background-image:url("../img/01D-Settings.png"); }	
+#step4B { background-image:url("../img/01B-Settings2.png"); }  
+
+#splash { background-image:url("../img/02B-Splash-with-image.png"); }	
+#install-screen { background-image:url("../img/03-NNL-Loader-Black.png"); } 
+#login { background-image:url("../img/04-Login.png"); }	
+#swipe { background-image:url("../img/05-Swipe.png"); }	
+#confirm { background-image:url("../img/06-Confirmation.png"); }	
+
+#register-swipe
+{
+  background: url("../img/dots.png") center no-repeat;
+  background-size: 116px;
+}  
+
