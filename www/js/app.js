@@ -35,6 +35,7 @@ $(document).on('ready', function(){
 			navigateTo("step3");
 		}else{
 			indicator.append("<li></li>");
+			navigator.notification.beep(1);
 			navigator.notification.vibrate(500);
 		}
 	});

@@ -7,6 +7,9 @@
     <author email="fpaz@paypal.com" href="http://phonegap.com">
         Frank Paz
     </author>
+    <feature name="Notification">
+        <param name="android-package" value="org.apache.cordova.Notification" />
+    </feature>
     <preference name="permissions" value="none" />
     <preference name="phonegap-version" value="3.4.0" />
     <preference name="orientation" value="portrait" />
