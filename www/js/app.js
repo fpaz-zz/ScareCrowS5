@@ -1,7 +1,7 @@
 function navigateTo(step) {
 	history.pushState(step, step, '#' + step);
 	window.location.href='#'+step;
-	//$('html,body').scrollTop($('#' + step).offset().top);
+
 	if(step == 'login'){
 		$('input[name=email]').focus();
 	}
@@ -35,8 +35,7 @@ $(document).on('ready', function(){
 			navigateTo("step3");
 		}else{
 			indicator.append("<li></li>");
-			navigator.notification.beep(1);
-			navigator.notification.vibrate(500);
+			navigator.notification.vibrate(200);
 		}
 	});
 
