@@ -35,12 +35,13 @@ $(document).on('ready', function(){
 			navigateTo("step3");
 		}else{
 			indicator.append("<li></li>");
-			navigator.notification.vibrate(200);
+			navigator.notification.vibrate(100);
 		}
 	});
 
 	$("#swipe a").bind("touchend", function(event){
 		navigateTo(this.href.split("#")[1]);
+		navigator.notification.vibrate(1000);
 	});
 
 	loaderInstall();
