@@ -14,35 +14,49 @@ function loaderInstall() {
 		setTimeout(function(){
 			var nextId = $('#' + stepId).next().attr("id");
 			navigateTo(nextId);
-			navigator.notification.vibrate(500);
+			try{
+				navigator.notification.vibrate(500);
+			}catch(e){
+				throw("Doesn't support vibrate");
+			}
 		}, 1500);
 	}	
 }
 
-$(document).on('ready', function(){
+$(function(){
+	
 	$("dd a.hotspot").click(function(){
 		navigateTo(this.href.split("#")[1]);
 		return false;
 	});
 
-	window.addEventListener("popstate", loaderInstall);
-
-	$("#register-swipe").bind('touchend', function(event){
+	$("#register-swipe").swipedown(function(event){
 		var indicator = $("ul#indicator");
 		var boxSize = indicator.find("li").size();
-
-		if(boxSize == 8){
+		console.log("swipedown");
+		if(boxSize == 7){
 			navigateTo("step3");
 		}else{
 			indicator.append("<li></li>");
-			navigator.notification.vibrate(100);
+			try{
+				navigator.notification.vibrate(100);
+			}catch(e){
+				throw("Doesn't support vibrate");
+			}
 		}
 	});
 
-	$("#swipe a").bind("touchend", function(event){
+	$("#swipe a").swipedown(function(event){
 		navigateTo(this.href.split("#")[1]);
-		navigator.notification.vibrate(1000);
+		try{
+			navigator.notification.vibrate(1000);
+		}catch(e){
+			throw("Doesn't support vibrate");
+		}
+
 	});
+
+	window.addEventListener("popstate", loaderInstall);
 
 	loaderInstall();
 	

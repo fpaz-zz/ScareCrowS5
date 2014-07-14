@@ -86,11 +86,6 @@ a.btn
   padding:40px;
 }
 
-#wrapper dl dd a.hotspot
-{
-  /*border: 1px solid yellow;*/
-}
-
 #wrapper input
 {
   position: absolute;
@@ -198,5 +193,10 @@ ul#indicator li {
 {
   background: url("../img/dots.png") center no-repeat;
   background-size: 116px;
-}  
+} 
+
+#wrapper dl dd a
+{
+  /*border: 1px solid yellow;*/
+} 
 
