@@ -59,9 +59,6 @@ function onDeviceReady(){
 	window.addEventListener("popstate", loaderInstall);
 
 	loaderInstall();
-	
-	// make app fullscreen	
-	//StatusBar.hide();
 }
 
 $(document).ready(function(){
@@ -69,6 +66,11 @@ $(document).ready(function(){
         && document.URL.indexOf("https://") === -1) {
 		
 		document.addEventListener("deviceready", onDeviceReady, false);
+		try{
+			navigator.splashscreen.hide();
+		}catch(e){
+			throw("Doesn't support splashscreen hiding." );
+		}
 		//onDeviceReady();
 	}else{
 		onDeviceReady();
