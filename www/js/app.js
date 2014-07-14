@@ -59,13 +59,19 @@ function onDeviceReady(){
 $(document).ready(function(){
 	if(document.URL.indexOf("http://") === -1 
         && document.URL.indexOf("https://") === -1) {
-		document.addEventListener("deviceready", onDeviceReady, false);
 		try{
-			navigator.splashscreen.hide();
-		}catch(e){
-			throw("Doesn't support splashscreen hiding." );
-		}
-		//onDeviceReady();
+			document.addEventListener("deviceready", onDeviceReady, false);	
+  			
+  			document.addEventListener("backbutton", function (e) {
+				if (window.location.hash == "") {
+                	e.preventDefault();
+                	navigator.app.exitApp();
+            	}
+           		else {
+                	navigator.app.backHistory();
+            	}
+        	}, false);			
+		}catch(e){};
 	}else{
 		onDeviceReady();
 	}
