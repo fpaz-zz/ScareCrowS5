@@ -23,8 +23,8 @@ function loaderInstall() {
 	}	
 }
 
-$(function(){
-	
+function onDeviceReady(){
+	alert("Device Ready!");
 	$("dd a.hotspot").click(function(){
 		navigateTo(this.href.split("#")[1]);
 		return false;
@@ -46,14 +46,13 @@ $(function(){
 		}
 	});
 
-	$("#swipe a").swipedown(function(event){
+	$("#swipe-link").swipedown(function(event){
 		navigateTo(this.href.split("#")[1]);
 		try{
 			navigator.notification.vibrate(1000);
 		}catch(e){
 			throw("Doesn't support vibrate");
 		}
-
 	});
 
 	window.addEventListener("popstate", loaderInstall);
@@ -61,7 +60,14 @@ $(function(){
 	loaderInstall();
 	
 	// make app fullscreen	
-	document.addEventListener("deviceready", function(){
-		StatusBar.hide();
-	}, false);
+	StatusBar.hide();
+}
+
+$(document).ready(function(){
+	if(document.URL.indexOf("http://") === -1 
+        && document.URL.indexOf("https://") === -1) {
+		document.addEventListener("deviceready", onDeviceReady, false);
+	}else{
+		onDeviceReady();
+	}
 });
