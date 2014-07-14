@@ -14,12 +14,16 @@ function loaderInstall() {
 		setTimeout(function(){
 			var nextId = $('#' + stepId).next().attr("id");
 			navigateTo(nextId);
-			try{
-				navigator.notification.vibrate(500);
-			}catch(e){
-				throw("Doesn't support vibrate");
-			}
+			vibrate(500);
 		}, 1500);
+	}	
+}
+
+function vibrate(ms) {
+	try{
+		navigator.notification.vibrate(ms);
+	}catch(e){
+		throw("Doesn't support vibrate");
 	}	
 }
 
@@ -29,31 +33,22 @@ function onDeviceReady(){
 		return false;
 	});
 
-	$("#register-swipe").swipedown(function(event){
+	$("#register-swipe").bind('touchend', function(event){
 		var indicator = $("ul#indicator");
 		var boxSize = indicator.find("li").size();
 
 		if(boxSize == 7){
+			vibrate(1000);
 			navigateTo("step3");
 		}else{
 			indicator.append("<li></li>");
-			try{
-				navigator.notification.vibrate(100);
-			}catch(e){
-				throw("Doesn't support vibrate");
-			}
+			vibrate(100);
 		}
 	});
 
-	$("#link-swipe").swipedown(function(event){
-		alert('asdf')
+	$("#link-swipe").bind('touchend', function(event){
 		navigateTo('confirm');
-		
-		try{
-			navigator.notification.vibrate(1000);
-		}catch(e){
-			throw("Doesn't support vibrate");
-		}
+		vibrate(1000);
 	});
 
 	window.addEventListener("popstate", loaderInstall);
@@ -64,7 +59,6 @@ function onDeviceReady(){
 $(document).ready(function(){
 	if(document.URL.indexOf("http://") === -1 
         && document.URL.indexOf("https://") === -1) {
-		
 		document.addEventListener("deviceready", onDeviceReady, false);
 		try{
 			navigator.splashscreen.hide();
