@@ -24,7 +24,6 @@ function loaderInstall() {
 }
 
 function onDeviceReady(){
-	alert("Device Ready!");
 	$("dd a.hotspot").click(function(){
 		navigateTo(this.href.split("#")[1]);
 		return false;
@@ -33,7 +32,7 @@ function onDeviceReady(){
 	$("#register-swipe").swipedown(function(event){
 		var indicator = $("ul#indicator");
 		var boxSize = indicator.find("li").size();
-		console.log("swipedown");
+
 		if(boxSize == 7){
 			navigateTo("step3");
 		}else{
@@ -46,8 +45,10 @@ function onDeviceReady(){
 		}
 	});
 
-	$("#swipe-link").swipedown(function(event){
-		navigateTo(this.href.split("#")[1]);
+	$("#link-swipe").swipedown(function(event){
+		alert('asdf')
+		navigateTo('confirm');
+		
 		try{
 			navigator.notification.vibrate(1000);
 		}catch(e){
@@ -60,13 +61,15 @@ function onDeviceReady(){
 	loaderInstall();
 	
 	// make app fullscreen	
-	StatusBar.hide();
+	//StatusBar.hide();
 }
 
 $(document).ready(function(){
 	if(document.URL.indexOf("http://") === -1 
         && document.URL.indexOf("https://") === -1) {
+		
 		document.addEventListener("deviceready", onDeviceReady, false);
+		//onDeviceReady();
 	}else{
 		onDeviceReady();
 	}
