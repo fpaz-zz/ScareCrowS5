@@ -76,6 +76,7 @@ function onDeviceReady(){
 
 	$("#use-paypal").click(function(){
 		$(this).toggleClass("toggle-on");
+		setTimeout(function(){ navigateTo("splash")},1000);
 	});
 
 	window.addEventListener("popstate", loaderInstall);
