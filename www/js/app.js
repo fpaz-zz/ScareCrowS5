@@ -14,6 +14,7 @@ function navigateTo(step) {
 	if(step == "confirm") {
 		if(!$("#install-PP").hasClass("checked")){
 			step = "install-paypal-app";
+			$("#install-PP").addClass("checked");
 		}
 	}
 
