@@ -48,46 +48,69 @@
 				</dd>	
 
 				<dd id="step4A">
+					<a href="#splash" class="hotspot" style="width: 358px;height: 62px;position: absolute;top: 72px;left: 0;"></a>
+					<a href="#splash" class="hotspot" style="width: 358px;height: 62px;position: absolute;top: 136px;left: 0;"></a>
 					<a href="#splash" class="hotspot" style="width: 358px;height: 62px;position: absolute;top: 202px;left: 0;"></a>
+					<a href="#splash" class="hotspot" style="width: 358px;height: 62px;position: absolute;top: 202px;left: 0;"></a>
+					<a href="#splash" class="hotspot" style="width: 358px;height: 62px;position: absolute;top: 266px;left: 0;"></a>
+					<a href="#splash" class="hotspot" style="width: 358px;height: 62px;position: absolute;top: 330px;left: 0;"></a>
+					<a href="#splash" class="hotspot" style="width: 358px;height: 62px;position: absolute;top: 394px;left: 0;"></a>
 				</dd>
 				<dd id="step4B">
-					<a href="#splash" class="hotspot" style="width: 358px;height: 62px;position: absolute;top: 411px;left: 0;"></a>
+					<div id="use-paypal" class="toggle-on"></div>
 					<a href="javascript:history.go(-1);" style="width: 189px;height: 45px;position: absolute;left: 0;top: 25px;"></a>											
 				</dd>
 
 				<dd id="splash">
 					<a href="#install-screen" class="hotspot" style="width: 333px;height: 48px;position: absolute;bottom: 60px;left: 11px;"></a>								
+					<div id="install-NNL" class="checkbox checked" style="position: absolute;width: 25px;height: 25px;right: 18px;top: 254px;"></div>
+					<div id="install-PP" class="checkbox checked" style="position: absolute;width: 25px;height: 25px;right: 18px;top: 368px;"></div>
 					<a href="javascript:history.go(-1);" style="width: 181px;height: 45px;position: absolute;"></a>											
 				</dd>		
 
-				<dd id="install-screen">
-					<a href="javascript:history.go(-1);" style="width: 181px;height: 45px;position: absolute;"></a>											
+				<dd id="install-screen" class="loader">
+					<img class="spin-logo" src="img/loader/introLoaderLogo.png" />
+					<img class="spin-loader" src="img/loader/introLoaderCircle.png" />
+					<p>Downloading and installing apps. This may take a while depending on your data connection.</p>
 				</dd>
 
 				<dd id="login">
 					<input type="text" name="email" placeholder="Email address" style="top: 166px;left: 21px;width: 317px;height: 20px;"/>
 					<input type="password" name="password" placeholder="Password" style="top: 231px;left: 21px;width: 317px;height: 20px;"/>
-					<a href="#loading-screen" class="hotspot" style="width: 333px;height: 55px;position: absolute;bottom: 304px;left: 13px;"></a>									
+					<a href="#loading-screen" class="hotspot" style="width: 333px;height: 55px;position: absolute;bottom: 304px;left: 13px;"></a>
+					<a href="navigator.app.loadUrl('https://www.paypal.com/sg/webapps/mpp/get-started', {openExternal : true});" class="hotspot" style="width: 333px;height: 55px;position: absolute;bottom: 304px;left: 13px;"></a>								
 				</dd>		
 
-				<dd id="loading-screen">
-					<img id="logo" src="img/loader/introLoaderLogo.png" />
-					<img id="loader" src="img/loader/introLoaderCircle.png" />
+				<dd id="loading-screen" class="loader">
+					<img class="spin-logo" src="img/loader/introLoaderLogo.png" />
+					<img class="spin-loader" src="img/loader/introLoaderCircle.png" />
+					<p>Processing your request.<br>Please wait a moment....</p>
 				</dd>
 
 				<dd id="swipe">
+					<a href="#login" style="width: 62px;height: 45px;position: absolute;right: 10px;top: 60px;"></a>											
 					<div id="link-swipe" data-xthreshold="700" style="width: 64px;height: 98px;position: absolute;bottom: 0;left: 146px;"></div>									
-				</dd>		
+				</dd>	
+
+				<dd id="install-paypal-app">
+					<a href="#install-paypal-app-screen" class="hotspot" style="width: 333px;height: 51px;position: absolute;bottom: 181px;left: 13px;"></a>									
+					<a href="#confirm" class="hotspot" style="width: 97px;height: 37px;position: absolute;bottom: 138px;left: 125px;"></a>									
+				</dd>
+				
+				<dd id="install-paypal-app-screen" class="loader">
+					<img class="spin-logo" src="img/loader/introLoaderLogo.png" />
+					<img class="spin-loader" src="img/loader/introLoaderCircle.png" />
+					<p>Downloading and installing the PayPal app. This may take a while depending on your data connection.</p>
+				</dd>
 
 				<dd id="confirm">
-					<a href="https://www.paypal-pages.com/samsunggalaxys5/sg/index.html" style="width: 333px;height: 56px;position: absolute;bottom: 228px;left: 13px;"></a>
+					<a href="navigator.app.loadUrl('https://www.paypal-pages.com/samsunggalaxys5/sg/index.html#section23', {openExternal : true});" style="width: 333px;height: 56px;position: absolute;bottom: 228px;left: 13px;"></a>
 					<a href="index.html" style="width: 110px;height: 37px;position: absolute;bottom: 173px;left: 122px;"></a>											
 				</dd>
 			</dl>
 		</section>
-		
+		<script src="cordova.js"></script>
 		<script src="js/jquery.js"></script>
-		<script src="js/Tocca.min.js"></script>
 		<script src="js/app.js"></script>		
 	</body>
 </html>

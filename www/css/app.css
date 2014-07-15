@@ -114,7 +114,7 @@ ul#indicator li {
   margin-left: 9px;
 }
 
-#logo {
+.spin-logo {
   top: 30%;
   left: 50%;
   margin-top: -19px;
@@ -124,7 +124,7 @@ ul#indicator li {
   height: 37px;
 }
 
-#loader {
+.spin-loader {
   top: 30%;
   left: 50%;
   margin-top: -47px;
@@ -184,10 +184,30 @@ ul#indicator li {
 #step4B { background-image:url("../img/01B-Settings2.png"); }  
 
 #splash { background-image:url("../img/02-NNL-non-samsung-standard-V2.png"); }	
-#install-screen { background-image:url("../img/03-NNL-Loader-Black.png"); } 
 #login { background-image:url("../img/04-Login.png"); }	
 #swipe { background-image:url("../img/05-Swipe.png"); }	
-#confirm { background-image:url("../img/06-Confirmation.png"); }	
+#confirm { background-image:url("../img/06-Confirmation.png"); }
+#install-paypal-app { background-image:url("../img/Finger-Print-Link.png"); }
+
+.checked { background-image: url("../img/check.png"); background-size: 25px;}	
+.toggle-on { background-image: url("../img/toggle-on.png"); background-size: 52px;} 
+
+#use-paypal {
+  width: 52px;
+  height: 22px;
+  position: absolute;
+  top: 435px;
+  right: 14px;  
+}
+
+.loader p {
+  position: absolute;
+  text-align: center;
+  top: 250px;
+  padding: 0 40px;
+  right:0;
+  left:0;
+}
 
 #register-swipe
 {
