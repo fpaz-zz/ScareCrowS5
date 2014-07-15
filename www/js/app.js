@@ -58,6 +58,7 @@ function onDeviceReady(){
 		var boxSize = indicator.find("li").size();
 
 		if(boxSize == 7){
+			indicator.append("<li></li>");
 			vibrate(500);
 			navigateTo("step3");
 		}else{
@@ -77,7 +78,7 @@ function onDeviceReady(){
 
 	$("#use-paypal").click(function(){
 		$(this).toggleClass("toggle-on");
-		setTimeout(function(){ navigateTo("splash")},1000);
+		setTimeout(function(){ navigateTo("splash"); },900);
 	});
 
 	window.addEventListener("popstate", loaderInstall);
