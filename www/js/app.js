@@ -1,6 +1,7 @@
 function navigateTo(step) {
 	history.pushState(step, step, '#' + step);
-	window.location.href='#'+step;
+	
+	window.location.href= '#' + step;
 
 	if(step == 'login'){
 		$('input[name=email]').focus();
@@ -33,23 +34,23 @@ function onDeviceReady(){
 		return false;
 	});
 
-	$("#register-swipe").bind('touchend', function(event){
+	$("#register-swipe").on('swipedown', function(e,data){
 		var indicator = $("ul#indicator");
 		var boxSize = indicator.find("li").size();
 
 		if(boxSize == 7){
-			vibrate(1000);
+			vibrate(500);
 			navigateTo("step3");
 		}else{
 			indicator.append("<li></li>");
-			vibrate(100);
+			vibrate(80);
 		}
-	});
+	}).on('touchmove touchstart touchend', function(e){e.preventDefault();});
 
-	$("#link-swipe").bind('touchend', function(event){
+	$("#link-swipe").on('swipedown', function(e,data){
 		navigateTo('confirm');
-		vibrate(1000);
-	});
+		vibrate(500);
+	}).on('touchmove touchstart touchend', function(e){e.preventDefault();});
 
 	window.addEventListener("popstate", loaderInstall);
 

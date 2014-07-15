@@ -183,7 +183,7 @@ ul#indicator li {
 #step4A { background-image:url("../img/01D-Settings.png"); }	
 #step4B { background-image:url("../img/01B-Settings2.png"); }  
 
-#splash { background-image:url("../img/02B-Splash-with-image.png"); }	
+#splash { background-image:url("../img/02-NNL-non-samsung-standard-V2.png"); }	
 #install-screen { background-image:url("../img/03-NNL-Loader-Black.png"); } 
 #login { background-image:url("../img/04-Login.png"); }	
 #swipe { background-image:url("../img/05-Swipe.png"); }	
@@ -192,7 +192,7 @@ ul#indicator li {
 #register-swipe
 {
   background: url("../img/dots.png") center no-repeat;
-  background-size: 78px;
+  background-size: 60px;
 } 
 
 #wrapper dl dd a
