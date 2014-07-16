@@ -5,6 +5,10 @@ function navigateTo(step) {
 		}
 	}
 
+	if(step == "step2") {
+		$("#step2 ul").empty();
+	}
+
 	if(step == "loading-screen") {
 		if($("input[name=email]").val() == "" || $("input[name=password]").val() == ""){
 			return false;	
@@ -95,16 +99,6 @@ $(document).ready(function(){
         && document.URL.indexOf("https://") === -1) {
 		try{
 			document.addEventListener("deviceready", onDeviceReady, false);	
-  			
-  			document.addEventListener("backbutton", function (e) {
-				if (window.location.hash == "") {
-                	e.preventDefault();
-                	navigator.app.exitApp();
-            	}
-           		else {
-                	navigator.app.backHistory();
-            	}
-        	}, false);			
 		}catch(e){};
 	}else{
 		onDeviceReady();
