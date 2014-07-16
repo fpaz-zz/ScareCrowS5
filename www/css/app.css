@@ -32,8 +32,12 @@ h1
   margin: 0;
   padding-top: 0;
   padding-bottom: 0;  
-  text-align: center;
+  
   margin: 70px 0 40px;
+}
+
+h1, h2 {
+  text-align: center;
 }
 
 ul { list-style-type: none; padding:0;}
@@ -188,6 +192,36 @@ ul#indicator li {
 #swipe { background-image:url("../img/05-Swipe.png"); }	
 #confirm { background-image:url("../img/06-Confirmation.png"); }
 #install-paypal-app { background-image:url("../img/Finger-Print-Link.png"); }
+
+#n1 {
+  background-image: url("../img/notifications/1-Notifications_Toolbar.png");
+}
+
+#n1-expand {
+  background-image: url("../img/notifications/2-Notifications_Toolbar_Expand.png");
+}
+
+#n2 {
+  background-image: url("../img/notifications/3-Notifications_Rich_Promotion_Option2.png");
+}
+
+#n2-expand {
+  background-image: url("../img/notifications/4-Notifications_Toolbar_Expand-Option3.png");
+}
+
+#n3 {
+  background-image: url("../img/notifications/5-Notifications_Rich_Promotion.png");
+}
+
+#n3-expand {
+  background-image: url("../img/notifications/6-Notifications_Toolbar_Expand-Option2.png");
+}
+
+#home-banner {
+  background-image: url("../img/notifications/home-screen-pop-up.png"); 
+}
+
+
 
 .checked { background-image: url("../img/check.png"); background-size: 25px;}	
 .toggle-on { background-image: url("../img/toggle-on.png"); background-size: 52px;} 
